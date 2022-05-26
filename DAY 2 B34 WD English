@@ -1,0 +1,28 @@
+Q.1 Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP - Hypertext Transfer Protocol
+              HTTP is the basis for almost all web applications. More specifically, HTTP is the method computers and servers use to request and send information.
+
+Key Features of HTTP/1.1:
+	•	It was no longer required for each connection to be terminated immediately after every request was served with a response; instead, with the keep-alive header, it was possible to have persistent connections. It allowed multiple requests/responses per TCP connection.
+	•	The Upgrade header was used to indicate a preference from the client that made it possible to switch to a more preferred protocol if found appropriate by the server.
+	•	HTTP/1.1 provided support for chunk transfers that allowed streaming of content dynamically as chunks and for additional headers to be sent after the message body. This enhancement was particularly useful in cases where values of a field remained unknown until the content had been produced. For example, when the content had to be digitally signed, it was not possible to do so before the entire content gets generated.
+	•	Other features that reinforced its stability were introduced such as:
+	•	pipelining (the second request is sent before the response to the first is adequately served)
+	•	content negotiation (an exchange between client and server to determine the media type, it also provides the provision to serve different versions of a resource at the same URI)
+	•	cache control (used to specify caching policies in both requests and responses)
+
+
+Key Features of HTTP/2:
+	•	It introduces the concept of a server push where the server anticipates the resources that will be required by the client and pushes them prior to the client making requests. The client retains the authority to deny the server push; however, in most cases, this feature adds a lot of efficiency to the process.
+	•	Introduces the concept of multiplexing that interleaves the requests and responses without head-of-line blocking and does so over a single TCP connection
+	•	It is a binary protocol i.e. only binary commands in the form of 0s and 1s are transmitted over the wire. The binary framing layer divides the message into frames that are segregated based on their type – Data or Header. This feature greatly increases efficiency in terms of security, compression and multiplexing.
+	•	HTTP/2 uses HPACK header compression algorithm that is resilient to attacks like CRIME and utilizes static Huffman encoding.
+
+
+
+
+Q.2 Write a blog about objects and its internal representation in Javascript
+Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript. These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).
+Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types. An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value. That reference or pointer points to the location in memory where the object is stored. 
+
